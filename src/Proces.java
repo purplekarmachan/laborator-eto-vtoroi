@@ -28,4 +28,23 @@ public class Proces {
             System.out.println(name);
         }
     }
+    public static Proces longest(Proces[] processes){
+        Proces maximum = new Proces("temp", Integer. MIN_VALUE);
+        for(Proces process : processes){
+            if(process.timeNeeded > maximum.timeNeeded){
+                maximum = process;
+            }
+        }
+        return maximum;
+    }
+    public static Proces shortest(Proces[] processes){
+        Proces minimum = new Proces("temp", Integer. MAX_VALUE);
+        for(Proces process : processes){
+            if(process.timeNeeded < minimum.timeNeeded){
+                minimum = process;
+            }
+        }
+        return minimum;
+    }
+
 }

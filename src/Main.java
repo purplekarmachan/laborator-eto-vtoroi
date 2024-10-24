@@ -10,6 +10,12 @@ public class Main {
             processes[i] = new Proces();
             processes[i].in();
         }
+
+        System.out.println("Procesul cel mai lung:");
+        Proces.longest(processes).out();
+        System.out.println("Procesul cel mai scurt:");
+        Proces.shortest(processes).out();
+
         System.out.println("Introduceti cuantumul de timp");
         int time = scanner.nextInt();
         System.out.println("Alegeti modul:\n1 - FIFO\n2 - LIFO");
@@ -24,10 +30,11 @@ public class Main {
                 System.out.println("LIFO");
                 LIFO lifo = new LIFO(time);
                 lifo.exec(processes);
-            }
+            } break;
             default:{
                 System.out.println("Alegeti intre 1 sau 2");
             }
         }
+
     }
 }
