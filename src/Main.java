@@ -35,6 +35,6 @@ public class Main {
                 System.out.println("Alegeti intre 1 sau 2");
             }
         }
-
+        Proces.victoriasSecret();
     }
 }
